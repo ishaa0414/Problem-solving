@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving</title>
+</head>
+<body>
+    <h1><u>Problem Solving</u></h1>
+    <h2>Find the Smaller Angle</h2>
+    <pre>
+        var Minimal_Angle = (h, m) => 
+        {
+        let hourangle=(30*h)+(0.5*m);
+        let minangle=6*m;
+        let minimalangle=0;
+        if(h===12 && m===0){
+          return 0;
+        }
+        if(hourangle > minangle){
+          minimalangle=(hourangle-minangle);
+        }
+        else{
+          minimalangle=(minangle-hourangle);
+        }
+        return minimalangle;
+        };
+    </pre>
+    <hr>
+    <h2>Check whether the year is Leap year or not.</h2>
+    <pre>
+ 
+        var Check_Leap = (year) => 
+        {
+         
+          if(year%4===0 && year%100!==0){
+            return "Leap Year";
+          }
+          else{
+            return "Non Leap Year";
+          }
+        
+        };
+    </pre>
+    <hr>
+    <h2>Perfect Number Check.</h2>
+    <pre>
+        var Perfect_Check = (N) => 
+        {
+          let num=0;
+          for(let i=0;i <= N;i++){
+            if(N%i === 0){
+              num=num+i;
+            }
+          }
+            if(num===N){
+              return "YES";
+            }    
+            else{
+              return "NO";
+            }
+        };
+    </pre>
+    <hr>
+    <h2>Reverse a Number.</h2>
+    <pre>
+        var Reverse_Number = (N) => 
+        {
+          let a=0;
+          let result=0;
+         while(N>0){
+            a = N%10;
+            result = result*10 + a;
+          N = Math.floor(N/10);
+         }
+         return result;
+        };
+         
+    </pre>
+    <hr>
+    <h2>Substring Check.</h2>
+    <pre>
+        var Substring_Check = (S1, S2) => 
+        {
+        var str1 = S2;
+        var str2 = S1;
+        var N = str1.length;
+        
+        for(let i =0;i <= (str2.length-N);i++)
+        {
+            if(str2.substring(i,i+N)===str1)
+            {
+                return "YES";
+            }
+        
+        }
+        return "NO";
+        };
+           
+    </pre>
+    <hr>
+</body>
+</html>
